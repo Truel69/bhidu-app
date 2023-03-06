@@ -1,4 +1,4 @@
-# project_bhidu
+# Project - Bhidu
 
 A new Flutter project.
 
