@@ -245,7 +245,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       ),
                     ),
                   ),
-                  
                   Spacer(),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,

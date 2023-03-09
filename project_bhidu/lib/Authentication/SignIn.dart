@@ -2,6 +2,8 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:project_bhidu/AppPages/MainRoutingPages.dart';
+import 'package:project_bhidu/Authentication/ForgetPassword.dart';
 import 'package:project_bhidu/Authentication/OTPVerification.dart';
 import 'package:project_bhidu/Authentication/SignUp.dart';
 import 'package:project_bhidu/Utils/utils.dart';
@@ -199,12 +201,20 @@ class _SignInScreenState extends State<SignInScreen> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
-                    Text(
-                      "Forgot password?",
-                      style: GoogleFonts.poppins(
-                        fontSize: 14,
-                        fontWeight: FontWeight.w500,
-                        color: Color(0xffE97F5C),
+                    InkWell(
+                      onTap: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => ForgetPasswordScreen(),
+                        ));
+                      },
+                      splashColor: Colors.orange.shade200,
+                      child: Text(
+                        "Forgot password?",
+                        style: GoogleFonts.poppins(
+                          fontSize: 14,
+                          fontWeight: FontWeight.w500,
+                          color: Color(0xffE97F5C),
+                        ),
                       ),
                     ),
                   ],
@@ -215,7 +225,7 @@ class _SignInScreenState extends State<SignInScreen> {
                 GestureDetector(
                   onTap: () {
                     Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) => OTPVerificationScreen(),
+                      builder: (context) => MainRouthingPageScreen(),
                     ));
                   },
                   child: Container(

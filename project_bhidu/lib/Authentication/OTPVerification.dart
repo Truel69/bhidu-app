@@ -2,6 +2,7 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:project_bhidu/Authentication/ForgetPassword.dart';
 import 'package:project_bhidu/Utils/utils.dart';
 
 class OTPVerificationScreen extends StatefulWidget {
@@ -29,7 +30,12 @@ class _OTPVerificationScreenState extends State<OTPVerificationScreen> {
       showSnackBar("Invalid OTP ", context);
       return;
     }
-    showSnackBar("$otp is you OTP", context);
+    showSnackBar("$otp is you OTP", context, color: Colors.green.shade400);
+    // Navigator.push(
+    //     context,
+    //     MaterialPageRoute(
+    //       builder: (context) => ForgetPasswordScreen(),
+    //     ));
   }
 
   @override
@@ -104,6 +110,33 @@ class _OTPVerificationScreenState extends State<OTPVerificationScreen> {
                   ),
                 ),
               ),
+              SizedBox(
+                height: 16,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    "Didn’t recieved email? ",
+                    style: GoogleFonts.poppins(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w500,
+                      color: Color(0xff353945),
+                    ),
+                  ),
+                  TextButton(
+                    onPressed: () {},
+                    child: Text(
+                      "Request again",
+                      style: GoogleFonts.poppins(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w500,
+                        color: Color(0xffE97F5C),
+                      ),
+                    ),
+                  ),
+                ],
+              )
             ],
           ),
         ),
