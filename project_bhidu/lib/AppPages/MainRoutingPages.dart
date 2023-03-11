@@ -57,7 +57,10 @@ class _MainRouthingPageScreenState extends State<MainRouthingPageScreen> {
                   if (bottomnavSelected != 0) {
                     setState(() {
                       bottomnavSelected = 0;
-                      _pageController.jumpToPage(0);
+                      // _pageController.jumpToPage(0);
+                      _pageController.animateToPage(0,
+                          duration: Duration(milliseconds: 400),
+                          curve: Curves.fastLinearToSlowEaseIn);
                     });
                   }
                 },
@@ -96,7 +99,9 @@ class _MainRouthingPageScreenState extends State<MainRouthingPageScreen> {
                   if (bottomnavSelected != 1) {
                     setState(() {
                       bottomnavSelected = 1;
-                      _pageController.jumpToPage(1);
+                      _pageController.animateToPage(1,
+                          duration: Duration(milliseconds: 400),
+                          curve: Curves.fastLinearToSlowEaseIn);
                     });
                   }
                 },
@@ -135,7 +140,9 @@ class _MainRouthingPageScreenState extends State<MainRouthingPageScreen> {
                   if (bottomnavSelected != 2) {
                     setState(() {
                       bottomnavSelected = 2;
-                      _pageController.jumpToPage(2);
+                      _pageController.animateToPage(2,
+                          duration: Duration(milliseconds: 400),
+                          curve: Curves.fastLinearToSlowEaseIn);
                     });
                   }
                 },
@@ -154,7 +161,9 @@ class _MainRouthingPageScreenState extends State<MainRouthingPageScreen> {
                   if (bottomnavSelected != 3) {
                     setState(() {
                       bottomnavSelected = 3;
-                      _pageController.jumpToPage(3);
+                      _pageController.animateToPage(3,
+                          duration: Duration(milliseconds: 400),
+                          curve: Curves.fastLinearToSlowEaseIn);
                     });
                   }
                 },
@@ -193,7 +202,9 @@ class _MainRouthingPageScreenState extends State<MainRouthingPageScreen> {
                   if (bottomnavSelected != 4) {
                     setState(() {
                       bottomnavSelected = 4;
-                      _pageController.jumpToPage(4);
+                      _pageController.animateToPage(4,
+                          duration: Duration(milliseconds: 400),
+                          curve: Curves.fastLinearToSlowEaseIn);
                     });
                   }
                 },
